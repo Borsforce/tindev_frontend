@@ -1,7 +1,12 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">{{ $t('menu.home') }}</router-link>
+    <router-link to="/profile/">{{ $t('menu.profile') }}</router-link>
+    <router-link to="/job-finder/">{{ $t('menu.jobFinder') }}</router-link>
+    <router-link to="/projects/">{{ $t('menu.projects') }}</router-link>
+    <router-link to="/companies/">{{ $t('menu.companies') }}</router-link>
+    <router-link to="/messages/">{{ $t('menu.messages') }}</router-link>
+    <router-link to="/settings/">{{ $t('menu.settings') }}</router-link>
   </div>
 
   <figure class="bg-gray-100 rounded-xl p-8">
