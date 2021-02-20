@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "home": "Home",
+    "profile": "Profile",
+    "jobFinder": "Job Finder",
+    "projects": "Project Ideas",
+    "companies": "Companies",
+    "messages": "Messages",
+    "settings": "Settings"
+  }   
+}
