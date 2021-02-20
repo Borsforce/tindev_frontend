@@ -1,11 +1,10 @@
 module.exports = {
-  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  purge: [""],
   theme: {
-    extend: {}
+    fontFamily: {
+      'custom': ['Poppins', 'sans-serif'],
+    },
   },
-  variants: {
-    extend: {}
-  },
-  plugins: []
-};
+  variants: {},
+  plugins: [],
+}
