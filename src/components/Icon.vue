@@ -3,11 +3,11 @@
 </template>
 
 <script>
-const context = require.context('../assets/icons/', false, /.svg$/);
+const context = require.context('@/assets/icons/', false, /.svg$/);
 const icons = {};
 
 context.keys().forEach((fileName) => {
-  const iconName = fileName.replace(/^\.\/icon-(.+)\.svg$/, '$1');
+  const iconName = fileName.replace(/^\.\/(.+)\.svg$/, '$1');
   const componentConfig = context(fileName);
   icons[iconName] = componentConfig.default || componentConfig;
 });
