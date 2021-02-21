@@ -1,5 +1,5 @@
 <template>
-  <div id="nav font-custom">
+  <div class="nav font-custom">
     <router-link to="/">{{ $t('menu.home') }}</router-link>
     <router-link to="/profile/">{{ $t('menu.profile') }}</router-link>
     <router-link to="/job-finder/">{{ $t('menu.jobFinder') }}</router-link>
