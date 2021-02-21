@@ -1,20 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <InfoBox image="Test" title="Test" subtitle="Test" description="Test" link="Test"
-    :badges="[{badge: 'Test1', link: 'Test1'},{badge: 'Test2', link: 'Test2'}]" />
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Icon name="activity-log" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
-import InfoBox from '@/components/InfoBox.vue';
+import Icon from '@/components/Icon.vue';
 
 export default {
   name: 'Home',
   components: {
-    InfoBox,
+    Icon,
   },
 };
 </script>
