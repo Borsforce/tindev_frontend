@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
     <div class="flex items-center align-center  justify-center mb-4">
       <Button size="sm" variant="primary">test123</Button>
       <Button size="sm" variant="secondary">test123</Button>
@@ -33,6 +31,7 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
+import Icon from '@/components/Icon.vue';
 
 import Button from '../components/Button.vue';
 import IconButton from '../components/IconButton.vue';
@@ -42,6 +41,7 @@ export default {
   components: {
     Button,
     IconButton,
+    Icon,
   },
 };
 </script>
