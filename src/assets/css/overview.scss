@@ -1,0 +1,24 @@
+#app {
+    max-width: 1560px;
+    margin: 0 auto;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .overview-page {
+    display: grid;
+    grid-template-areas: 
+    "header header header header" 
+    "main main main siderbar" 
+    "footer footer footer footer";
+  }
