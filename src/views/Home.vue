@@ -30,8 +30,6 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue';
-import Icon from '@/components/Icon.vue';
 
 import Button from '../components/Button.vue';
 import IconButton from '../components/IconButton.vue';
@@ -41,7 +39,6 @@ export default {
   components: {
     Button,
     IconButton,
-    Icon,
   },
 };
 </script>
