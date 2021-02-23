@@ -18,7 +18,7 @@ jobs:
       - name: Install all dependencies
         run: npm install
       - name: Lint the source code
-        run: npm run lint
+        run: npm run lint --no-fix
 
   deploy:
     name: Deploying the project to Github pages
