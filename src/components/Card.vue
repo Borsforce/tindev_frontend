@@ -1,34 +1,53 @@
 <template>
-  <div class="container mx-auto card rounded-lg">
-    <img :src="image" class="rounded-full avatar" />
+  <div class="card">
+    <img :src="$props.image" class="avatar" />
     <p>
-      <span class="text-left title">{{ title }}</span>
-      <span class="meta">{{ meta }}</span>
+      <span class="title">{{ $props.title }}</span>
+      <span class="meta">{{ $props.meta }}</span>
     </p>
     <p>
-      <span class="like" v-on:click="(() => console.log('Like!'))">Like</span>
-      <span class="comment" v-on:click="(() => console.log('Comment!'))">Comment</span>
+      <Icon name="star" class="card-icon like" />
+      <Icon name="chat-bubble" class="card-icon comment" />
     </p>
   </div>
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue';
+import Icon from '@/components/Icon.vue';
+
+export default defineComponent({
   name: 'Card',
   props: {
-    image: String,
-    title: String,
-    meta: String,
-    callback: Function,
+    image: { type: String, default: undefined },
+    title: { type: String, default: undefined },
+    meta: { type: String, default: undefined },
+    callback: { type: Function, default: undefined },
   },
-};
+  components: {
+    Icon,
+  },
+});
 </script>
 
-<style scoped>
+<style scoped lang="scss" >
+  .card-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    padding-bottom: 15px;
+  }
+  .like {
+    padding-left: 55px;
+  }
+  .comment {
+    padding-left: 28px;
+  }
   .card {
     background-color: #131315;
     color: #fff;
     text-align: left;
+    border-radius: 25px;
   }
   .avatar {
     width: 53px;
@@ -36,6 +55,8 @@ export default {
     position: absolute;
     margin-top: -22px;
     margin-left: -3px;
+    border-radius: 50%;
+    border: 2px solid #9C5EEB;
   }
   .title {
     padding-top: 12px;
@@ -52,19 +73,5 @@ export default {
     font-family: Poppins;
     font-size: 12px;
     line-height: 17px;
-  }
-  .like {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    padding-bottom: 15px;
-    padding-left: 55px;
-  }
-  .comment {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    padding-bottom: 15px;
-    padding-left: 28px;
   }
 </style>

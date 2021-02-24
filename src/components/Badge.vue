@@ -1,13 +1,21 @@
 <template>
-  <a :href="link">{{ badge }}</a>
+  <a :href="this.$props.link"><Icon :name="$props.badge" /></a>
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'Badge',
   props: {
-    badge: String,
-    link: String,
+    badge: {
+      type: String,
+      default: undefined,
+    },
+    link: {
+      type: String,
+      default: undefined,
+    },
   },
-};
+});
 </script>
