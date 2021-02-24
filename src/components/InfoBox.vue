@@ -1,12 +1,21 @@
 <template>
-  <div>
-    <img :src="$props.name" class="avatar" />
-    <p class="head-text">{{ $props.title }}</p>
-    <p class="sub-text">{{ $props.subtitle }}</p>
-    <p class="desc-text">{{ $props.description }}</p>
-    <a :href="$props.link"><p class="link-text">link</p></a>
-    <div v-for="badge in badges" :key="badge">
-      <Badge :badge="badge.badge" :link="badge.link" class="badge" />
+  <div class="card">
+    <div class="grid-1">
+      <img :src="$props.image" class="avatar" />
+      <div class="info-block">
+        <span class="head-text">{{ $props.title }}</span>
+        <span class="sub-text">{{ $props.subtitle }}</span>
+        <a :href="$props.link"><span class="link-text">{{ $props.link }}</span></a>
+      </div>
+      <div class="badges">
+        <slot v-for="badge in $props.badges" :key="badge">
+          <Badge :badge="badge.badge" :link="badge.link" class="badge" />
+        </slot>
+      </div>
+    </div>
+    <div class="grid-2">
+      <p class="desc-text">{{ $props.description }}</p>
+      <a :href="$props.link"><p class="link-text">{{ $props.link }}</p></a>
     </div>
   </div>
 </template>
@@ -59,15 +68,44 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  .badges {
+    margin-top: 16px;
+    margin-bottom: 37px;
+  }
+  .info-block {
+    display: inline-block;
+    margin-left: 18px;
+    vertical-align: top;
+  }
+  .grid-1 {
+    grid-area: "grid1";
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  .grid-2 {
+    grid-area: "grid2";
+    margin-left: 85px;
+    margin-top: 50px;
+    margin-right: 155px;
+  }
+  .card {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "grid1 grid2";
+    background-color: #131315;
+    border-radius: 30px;
+  }
   .avatar {
     width: 120px;
     height: 120px;
     border: 2px solid #9C5EEB;
     border-radius: 50%;
   }
-  p {
+  span, p {
     color: #fff;
     font-family: Poppins;
+    display: block;
   }
   .head-text {
     font-size: 18px;

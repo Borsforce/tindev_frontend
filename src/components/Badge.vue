@@ -1,9 +1,10 @@
 <template>
-  <a :href="this.$props.link"><Icon :name="$props.badge" /></a>
+  <a :href="$props.link"><span class="badge"><Icon :name="$props.badge" /></span></a>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
+import Icon from '@/components/Icon.vue';
 
 export default defineComponent({
   name: 'Badge',
@@ -17,5 +18,18 @@ export default defineComponent({
       default: undefined,
     },
   },
+  components: {
+    Icon,
+  },
 });
 </script>
+
+<style scoped lang="scss">
+  .badge {
+    color: #545455;
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+</style>
