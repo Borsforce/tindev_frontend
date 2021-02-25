@@ -7,8 +7,6 @@ import store from './store';
 
 import de from './locals/DE.json';
 
-import './index.css';
-
 const app = createApp(App);
 
 const i18n = createI18n({

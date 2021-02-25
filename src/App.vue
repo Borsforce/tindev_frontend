@@ -30,10 +30,6 @@
   </div>
 </template>
 
-<style lang='scss'>
-  @import '@/assets/scss/home.scss';
-</style>
-
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
@@ -50,3 +46,7 @@ export default {
   },
 };
 </script>
+<style lang='scss'>
+  @import './assets/scss/base/main.scss';
+  @import '@/assets/scss/home.scss';
+</style>
