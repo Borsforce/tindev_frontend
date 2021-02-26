@@ -1,7 +1,7 @@
 <template>
   <div class="home"></div>
 
-  <Form>
+  <Form :centered="true">
     <Input />
     <Input />
   </Form>
