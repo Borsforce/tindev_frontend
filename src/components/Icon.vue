@@ -1,5 +1,5 @@
 <template>
-  <component :is="name" role="img" />
+  <component :is="name" role="img" :width="width" :height="height" />
 </template>
 
 <script>
@@ -17,6 +17,14 @@ export default {
   components: icons,
 
   props: {
+    width: {
+      type: String,
+      required: false,
+    },
+    height: {
+      type: String,
+      required: false,
+    },
     name: {
       type: String,
       required: true,
