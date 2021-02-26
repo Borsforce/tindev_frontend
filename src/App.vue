@@ -10,6 +10,6 @@
   </div>
   <router-view />
 </template>
-<style lang='scss'>
-  @import './assets/scss/base/main.scss';
+<style lang="scss">
+@import './assets/scss/base/main.scss';
 </style>
