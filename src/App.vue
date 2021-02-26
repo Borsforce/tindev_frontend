@@ -7,6 +7,7 @@
     <router-link to="/companies/">{{ $t('menu.companies') }}</router-link>
     <router-link to="/messages/">{{ $t('menu.messages') }}</router-link>
     <router-link to="/settings/">{{ $t('menu.settings') }}</router-link>
+    <router-link to="/login/">{{ $t('menu.login') }}</router-link>
   </div>
   <router-view />
 </template>
