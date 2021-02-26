@@ -1,0 +1,33 @@
+.inputgroup {
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row wrap;
+  align-items: center;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+
+  .inputlabel {
+    width: 100%;
+    height: auto;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: $textColor;
+    margin-bottom: 0.75rem;
+  }
+}
+.inputgroup.as-row {
+  .inputlabel {
+    width: auto;
+    align-self: flex-start;
+    margin-bottom: 0rem;
+  }
+  > input,
+  textarea {
+    margin-left: auto;
+    align-self: flex-end;
+  }
+}
