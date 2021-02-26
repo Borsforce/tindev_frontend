@@ -13,4 +13,3 @@ export default defineComponent({
   props: { onSubmit: { type: Function, default: () => null } },
 });
 </script>
-<style></style>

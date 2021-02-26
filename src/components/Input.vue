@@ -23,27 +23,3 @@ export default defineComponent({
   name: 'Input',
 });
 </script>
-
-<style lang="scss">
-.inputgroup {
-  .input {
-    font-family: 'Poppins';
-    font-size: 1rem;
-    width: 100%;
-    height: 30px;
-    color: $textColor;
-    background-color: transparent;
-    padding: 0.5rem 1rem;
-    border: 1px solid;
-    border-radius: 0.8rem;
-    border-color: rgba(255, 255, 255, 0.15);
-    outline: none;
-    margin-bottom: 1.5rem;
-
-    &:focus {
-      border-color: rgba(255, 255, 255, 0.4);
-      background-color: rgba(255, 255, 255, 0.035);
-    }
-  }
-}
-</style>
