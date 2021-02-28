@@ -10,7 +10,7 @@
   padding-right: 1rem;
   margin-bottom: 1rem;
 
-  .inputgroup__label {
+  &__label {
     width: 100%;
     height: auto;
     font-size: 1.25rem;
@@ -19,7 +19,7 @@
     margin-bottom: 0.75rem;
   }
 
-  .inputgroup__input {
+  &__input {
     font-family: 'Poppins';
     font-size: 1.6rem;
     width: 100%;
@@ -40,7 +40,7 @@
       background-color: rgba(255, 255, 255, 0.035);
     }
   }
-  .inputgroup__textarea {
+  &__textarea {
     display: inline-flex;
     font-family: 'Poppins';
     font-size: 1.6rem;
@@ -68,7 +68,7 @@
       background-color: rgba(255, 255, 255, 0.035);
     }
   }
-  .inputgroup__radio {
+  &__radio {
     display: flex;
     box-sizing: border-box;
     width: 3.4rem;
@@ -92,13 +92,13 @@
       width: 1.4rem;
       height: 1.4rem;
     }
-    &.inputgroup__radio--checked {
+    &--checked {
       opacity: 1;
     }
-    &.inputgroup__radio--checked::after {
+    &--checked::after {
       background-color: $brandPrimary;
     }
-    &.inputgroup__radio--round {
+    &--round {
       border-radius: 100%;
       &::before {
         border-radius: 100%;
@@ -109,7 +109,7 @@
     }
   }
 
-  .inputgroup__checkbox {
+  &__checkbox {
     display: flex;
     box-sizing: border-box;
     width: 3.4rem;
@@ -135,10 +135,10 @@
       height: 100%;
       background-color: transparent;
     }
-    &.inputgroup__checkbox--checked::after {
+    &--checked::after {
       background-color: $brandPrimary;
     }
-    &.inputgroup__checkbox--round {
+    &--round {
       border-radius: 100%;
       &::after {
         border-radius: 100%;
