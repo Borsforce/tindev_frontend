@@ -5,8 +5,6 @@
   </div>
 </template>
 
-<style></style>
-
 <script>
 import { defineComponent } from 'vue';
 
@@ -15,5 +13,3 @@ export default defineComponent({
   props: { title: { type: String, default: null } },
 });
 </script>
-
-<style></style>
