@@ -1,12 +1,12 @@
 <template>
   <div class="inputgroup">
-    <label v-if="this.$attrs.label" :for="this.$attrs.id" class="inputlabel">{{
+    <label v-if="this.$attrs.label" :for="this.$attrs.id" class="inputgroup__label">{{
       this.$attrs.label
     }}</label>
     <input
       :type="this.$attrs.type"
       :name="this.$attrs.name"
-      class="input"
+      class="inputgroup__input"
       :id="this.$attrs.id"
       :aria-describedby="this.$attrs.id"
       :required="this.$attrs.required"

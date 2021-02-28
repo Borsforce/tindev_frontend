@@ -1,9 +1,15 @@
 <template>
   <div class="inputgroup">
-    <label :for="this.$attrs.id" class="inputlabel">{{ this.$attrs.label }}</label>
+    <label v-on:click="this.toggleInput()" :for="this.$attrs.id" class="inputgroup__label">{{
+      this.$attrs.label
+    }}</label>
     <div
       v-on:click="this.toggleInput()"
-      :class="`inputcheckbox ${this.isChecked() ? 'checked' : ''}`"
+      :class="
+        `inputgroup__input inputgroup__checkbox ${
+          this.isChecked() ? 'inputgroup__checkbox--checked' : ''
+        } ${'round' in this.$attrs ? 'inputgroup__checkbox--round' : ''}`
+      "
     ></div>
     <input
       type="checkbox"

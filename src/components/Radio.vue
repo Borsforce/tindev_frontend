@@ -1,15 +1,27 @@
 <template>
-  <div class="inputgroup as-row">
-    <label :for="this.$attrs.id" class="inputlabel">{{ this.$attrs.label }}</label>
+  <div class="inputgroup inputgroup--as-row">
+    <label v-on:click="this.toggleInput()" :for="this.$attrs.id" class="inputgroup__label">{{
+      this.$attrs.label
+    }}</label>
+    <div
+      v-on:click="this.toggleInput()"
+      :class="
+        `inputgroup__input inputgroup__radio ${
+          this.isChecked() ? 'inputgroup__radio--checked' : ''
+        } ${'round' in this.$attrs ? 'inputgroup__radio--round' : ''}`
+      "
+    ></div>
     <input
       type="radio"
+      hidden
       :name="this.$attrs.name"
-      :class="`${this.isRounded()}`"
       :id="this.$attrs.id"
       :aria-describedby="this.$attrs.id"
       :required="this.$attrs.required"
       :placeholder="this.$attrs.placeholder"
-      :checked="this.$attrs.checked"
+      :value="this.isChecked()"
+      :checked="this.isChecked()"
+      v-on:click="this.toggleInput()"
     />
   </div>
 </template>
@@ -18,11 +30,19 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Checkbox',
+  name: 'Radio',
   methods: {
-    isRounded() {
-      return `inputradio ${'round' in this.$attrs ? 'round' : ''}`;
+    toggleInput() {
+      this.state = !this.state;
     },
+    isChecked() {
+      return this.state;
+    },
+  },
+  data() {
+    return {
+      state: this.$attrs.checked ?? false,
+    };
   },
 });
 </script>

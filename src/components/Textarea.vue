@@ -1,8 +1,8 @@
 <template>
   <div class="inputgroup">
-    <label :for="this.$attrs.id" class="inputlabel">{{ this.$attrs.label }}</label>
+    <label :for="this.$attrs.id" class="inputgroup__label">{{ this.$attrs.label }}</label>
     <textarea
-      class="textarea"
+      class="inputgroup__input inputgroup__textarea"
       :name="this.$attrs.name"
       :id="this.$attrs.id"
       v-model="this.text_area"
