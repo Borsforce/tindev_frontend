@@ -4,9 +4,21 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: $background;
     font-size:10px;
+    background-image: url('~@/assets/background.png');
 }
 
 #app {
     max-width: 87.5rem;
     margin: 0 auto;
 }
+
+span, p {
+    font-size: .875rem;
+    color: #fff;
+}
+
+ a {
+     color: #fff;
+     text-decoration: none;
+     font-size: .875rem;
+ }

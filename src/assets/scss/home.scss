@@ -1,11 +1,12 @@
 .overview-page {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:auto;
     grid-template-areas: 
     "header header header header"
     "sidebar main main main"
     "footer footer footer footer";
+    height: 100vh;
+    padding: 0 1.25rem;
 
     .header {
         grid-area: header;
@@ -43,5 +44,19 @@
 
     .footer {
         grid-area: footer;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: .9375rem;
+
+        a, span {
+            padding-right: 2.1875rem;
+            color: $iconColor;
+            line-height: 1.8125rem;
+        }
+
+        img {
+            margin-right: 7.5rem;
+            max-width: 6.875rem;
+        }
     }
 }

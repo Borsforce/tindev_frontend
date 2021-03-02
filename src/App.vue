@@ -25,6 +25,7 @@
     </div>
     <div class='footer'>
       <img alt='Tindev' src='@/assets/logo.png' />
+      <span>{{ $t('footer.gtc') }}</span>
       <router-link to="/">{{ $t('menu.home') }}</router-link>
       <router-link to="/profile/">{{ $t('menu.profile') }}</router-link>
       <router-link to="/job-finder/">{{ $t('menu.jobFinder') }}</router-link>
