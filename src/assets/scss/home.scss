@@ -1,3 +1,47 @@
-body {
-    background: #ccc;
+.overview-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:auto;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar main main main"
+    "footer footer footer footer";
+
+    .header {
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.25rem;
+    }
+
+    .overview--icon-wrapper {
+        padding-right: 1.875rem;
+        svg {
+            transform: scale(1.7);
+            padding: 0 1.125rem;
+            color: $iconColor;
+        }
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.5rem;
+
+        a {
+            color: #fff;
+            font-size: 1.125rem;
+            text-decoration: none;
+            padding: .6875rem 0px;
+        }
+    }
+
+    .footer {
+        grid-area: footer;
+    }
 }

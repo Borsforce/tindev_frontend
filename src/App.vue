@@ -5,9 +5,9 @@
         <img alt='Tindev' src='@/assets/logo.png' />
       </div>
       <div class='overview--icon-wrapper'>
-        <Icon name='message'/>
-        <Icon name='user'/>
-        <Icon name='settings'/>
+        <Icon name='envelope-closed'/>
+        <Icon name='person'/>
+        <Icon name='gear'/>
       </div>
     </div>
     <div class='sidebar'>
@@ -20,6 +20,9 @@
       <router-link to="/settings/">{{ $t('menu.settings') }}</router-link>
       <router-view />
     </div>
+    <div class='main'>
+      <h1>Hello</h1>
+    </div>
     <div class='footer'>
       <img alt='Tindev' src='@/assets/logo.png' />
       <router-link to="/">{{ $t('menu.home') }}</router-link>
@@ -31,9 +34,9 @@
 </template>
 
 <script>
+import Icon from '@/components/Icon.vue';
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
-// import Icon from '@/components/Icon.vue';
 // import Button from '../components/Button.vue';
 // import IconButton from '../components/IconButton.vue';
 
@@ -42,9 +45,10 @@ export default {
   components: {
     // Button,
     // IconButton,
-    // Icon,
+    Icon,
   },
 };
+
 </script>
 <style lang='scss'>
   @import './assets/scss/base/main.scss';
