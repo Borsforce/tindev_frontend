@@ -1,5 +1,9 @@
 <template>
-  <a :href="$props.link"><span class="badge"><Icon :name="$props.badge" /></span></a>
+  <div class="badgegroup">
+    <a :href="$props.link"
+      ><span class="badgegroup__badge"><Icon :name="$props.badge"/></span
+    ></a>
+  </div>
 </template>
 
 <script>
@@ -23,13 +27,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped lang="scss">
-  .badge {
-    color: #545455;
-    svg {
-      width: 22px;
-      height: 22px;
-    }
-  }
-</style>

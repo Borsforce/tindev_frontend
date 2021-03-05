@@ -1,0 +1,63 @@
+.infoboxgroup {
+  &__badges {
+    margin-top: 1.6rem;
+    margin-bottom: 3.7rem;
+  }
+  &__info-box {
+    display: inline-block;
+    margin-left: 1.8rem;
+    vertical-align: top;
+  }
+  &__grid-1 {
+    grid-area: 'grid1';
+    margin-top: 5rem;
+    margin-left: 5rem;
+  }
+  &__grid-2 {
+    grid-area: 'grid2';
+    margin-left: 8.5rem;
+    margin-top: 5rem;
+    margin-right: 15.5rem;
+  }
+  &__card {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 'grid1 grid2';
+    background-color: #131315;
+    border-radius: 3rem;
+  }
+  &__avatar {
+    width: 12rem;
+    height: 12rem;
+    border: 0.2rem solid #9c5eeb;
+    border-radius: 50%;
+  }
+  span,
+  p {
+    color: #fff;
+    font-family: Poppins;
+    display: block;
+  }
+  &__head-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+  &__sub-text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  &__link-text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  &_desc-text {
+    color: #b7b7b7;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  &__badge {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+}

@@ -1,0 +1,45 @@
+.cardgroup {
+  &__card-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+    padding-bottom: 1.5rem;
+  }
+  &__like {
+    padding-left: 5.5rem;
+  }
+  &__comment {
+    padding-left: 2.8rem;
+  }
+  &__card {
+    background-color: #131315;
+    color: #fff;
+    text-align: left;
+    border-radius: 2.5rem;
+  }
+  &__avatar {
+    width: 5.3rem;
+    height: 5.3rem;
+    position: absolute;
+    margin-top: -2.2rem;
+    margin-left: -0.3rem;
+    border-radius: 50%;
+    border: 0.2rem solid #9c5eeb;
+  }
+  &__title {
+    padding-top: 1.2rem;
+    padding-left: 5.7rem;
+    font-size: 1.8rem;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+  &__meta {
+    padding-top: 1.6rem;
+    padding-left: 0.9rem;
+    color: #717171;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}

@@ -1,0 +1,19 @@
+.skillgroup {
+  span {
+    font-family: Poppins;
+    color: #fff;
+    display: block;
+  }
+  &__head-text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+  &__desc-text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  hr {
+    background-color: #5e5e5e;
+  }
+}

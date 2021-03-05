@@ -1,7 +1,9 @@
 <template>
-  <span class="head-text">{{ $props.title }}</span>
-  <span class="desc-text">{{ $props.description }}</span>
-  <hr />
+  <div class="skillgroup">
+    <span class="skillgroup__head-text">{{ $props.title }}</span>
+    <span class="skillgroup__desc-text">{{ $props.description }}</span>
+    <hr />
+  </div>
 </template>
 
 <script>
@@ -21,23 +23,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-  span {
-    font-family: Poppins;
-    color: #fff;
-    display: block;
-  }
-  .head-text {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-  }
-  .desc-text {
-    font-size: 14px;
-    line-height: 17px;
-  }
-  hr {
-    background-color: #5E5E5E;
-  }
-</style>
