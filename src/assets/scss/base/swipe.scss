@@ -1,0 +1,60 @@
+.swipe {
+  background-color: $darkBackground;
+  border-radius: 3rem;
+  color: $textColor;
+  padding: 2rem;
+  width:20rem;
+  .carousel_row {
+    .carousel__slide {
+      min-height: 20rem;
+      .silder_text {
+        background-color: $brandPrimary;
+        border-radius: 2rem;
+        min-height: 100%;
+        padding: 2rem;
+        width: 100%;
+      }
+    }
+    .carousel__pagination{
+      justify-content: flex-end;
+      margin-right: 1rem;
+      margin-top: -2.5rem;
+      position: relative;
+      z-index: 2;
+      .carousel__pagination-button {
+        background-color:$moduleColor;
+        border-radius: 10rem;
+        border: none;
+        cursor: pointer;
+        height: 0.7rem;
+        margin: 0.1rem;
+        padding: 0px !important;
+        width: 0.8rem;
+      }
+      .carousel__pagination-button--active {
+        background-color:$darkBackground;
+      }
+    }
+  }
+  .title_row {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+  .button_row {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -2.5rem;
+    margin-top: 2rem;
+  }
+}
