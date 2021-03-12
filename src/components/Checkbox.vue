@@ -1,15 +1,25 @@
 <template>
-  <div class="w-full flex flex-col inputgroup">
-    <label :for="this.$attrs.id" class="w-full mt-1 flex flex-start md:text-3xl label">{{
-      this.$props.label
+  <div class="inputgroup">
+    <label v-on:click="this.toggleInput()" :for="this.$attrs.id" class="inputgroup__label">{{
+      this.$attrs.label
     }}</label>
+    <div
+      v-on:click="this.toggleInput()"
+      :class="
+        `inputgroup__input inputgroup__checkbox ${
+          this.isChecked() ? 'inputgroup__checkbox--checked' : ''
+        } ${'round' in this.$attrs ? 'inputgroup__checkbox--round' : ''}`
+      "
+    ></div>
     <input
       type="checkbox"
-      class="form-control p-3 pl-4 pr-4 border"
+      hidden
       :id="this.$attrs.id"
       :aria-describedby="this.$attrs.id"
+      :value="this.state"
       :required="this.$attrs.required"
-      :placeholder="this.$props.placeholder"
+      :placeholder="this.$attrs.placeholder"
+      :checked="this.$attrs.checked"
     />
   </div>
 </template>
@@ -19,8 +29,18 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Checkbox',
-  props: { label: { type: String, default: null } },
+  data() {
+    return {
+      state: this.$attrs.checked !== undefined,
+    };
+  },
+  methods: {
+    toggleInput() {
+      this.state = !this.state;
+    },
+    isChecked() {
+      return this.state;
+    },
+  },
 });
 </script>
-
-<style></style>

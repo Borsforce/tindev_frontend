@@ -1,15 +1,27 @@
 <template>
-  <div class="w-full flex flex-col inputgroup">
-    <label :for="this.$attrs.id" class="w-full mt-1 flex flex-start md:text-3xl label">{{
-      this.$props.label
+  <div class="inputgroup inputgroup--as-row">
+    <label v-on:click="this.toggleInput()" :for="this.$attrs.id" class="inputgroup__label">{{
+      this.$attrs.label
     }}</label>
+    <div
+      v-on:click="this.toggleInput()"
+      :class="
+        `inputgroup__input inputgroup__radio ${
+          this.isChecked() ? 'inputgroup__radio--checked' : ''
+        } ${'round' in this.$attrs ? 'inputgroup__radio--round' : ''}`
+      "
+    ></div>
     <input
       type="radio"
-      class="form-control p-3 pl-4 pr-4 rounded-full border radio"
+      hidden
+      :name="this.$attrs.name"
       :id="this.$attrs.id"
       :aria-describedby="this.$attrs.id"
       :required="this.$attrs.required"
-      :placeholder="this.$props.placeholder"
+      :placeholder="this.$attrs.placeholder"
+      :value="this.isChecked()"
+      :checked="this.isChecked()"
+      v-on:click="this.toggleInput()"
     />
   </div>
 </template>
@@ -18,14 +30,19 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Checkbox',
-  props: { label: { type: String, default: null } },
+  name: 'Radio',
+  methods: {
+    toggleInput() {
+      this.state = !this.state;
+    },
+    isChecked() {
+      return this.state;
+    },
+  },
+  data() {
+    return {
+      state: this.$attrs.checked ?? false,
+    };
+  },
 });
 </script>
-
-<style>
-.radio {
-  width: 1rem;
-  height: 1rem;
-}
-</style>

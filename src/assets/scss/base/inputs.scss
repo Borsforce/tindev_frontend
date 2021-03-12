@@ -1,0 +1,163 @@
+.inputgroup {
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row wrap;
+  align-items: center;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+
+  &__label {
+    width: 100%;
+    height: auto;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: $textColor;
+    margin-bottom: 0.75rem;
+  }
+
+  &__input {
+    font-family: 'Poppins';
+    font-size: 1.6rem;
+    width: 100%;
+    height: 3rem;
+    color: $textColor;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border: 0.1rem solid;
+    border-radius: 0.8rem;
+    border-color: rgba(255, 255, 255, 0.15);
+    outline: none;
+    margin-bottom: 1.5rem;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.035);
+    }
+  }
+  &__textarea {
+    display: inline-flex;
+    font-family: 'Poppins';
+    font-size: 1.6rem;
+    width: 100%;
+    min-height: 3rem;
+    height: auto;
+    color: $textColor;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    padding-bottom: 2rem;
+    border: 0.1rem solid;
+    border-radius: 0.8rem;
+    border-color: rgba(255, 255, 255, 0.15);
+    outline: none;
+    margin-bottom: 1.5rem;
+    resize: none;
+
+    &[contenteditable]:empty::before {
+      content: attr(placeholder);
+      color: gray;
+    }
+
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.035);
+    }
+  }
+  &__radio {
+    display: flex;
+    box-sizing: border-box;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 0.7rem;
+    border: 0.2rem solid $brandPrimary;
+    outline: none;
+    cursor: pointer;
+    background-color: $darkBackground;
+    padding: 5px;
+    opacity: 0.6;
+
+    &::after {
+      box-sizing: border-box;
+      content: '';
+      position: relative;
+      top: 50%;
+      left: 50%;
+      border-radius: 0.3rem;
+      transform: translate(-50%, -50%);
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+    &--checked {
+      opacity: 1;
+    }
+    &--checked::after {
+      background-color: $brandPrimary;
+    }
+    &--round {
+      border-radius: 100%;
+      &::before {
+        border-radius: 100%;
+      }
+      &::after {
+        border-radius: 100%;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    box-sizing: border-box;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 0.7rem;
+    border: 0.2rem solid $brandPrimary;
+    outline: none;
+    box-shadow: none;
+    background-color: $darkBackground;
+    padding: 5px;
+    cursor: pointer;
+
+    &::after {
+      display: block;
+      box-sizing: border-box;
+      content: '';
+      position: relative;
+      top: 50%;
+      left: 50%;
+      border-radius: 0.3rem;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+    }
+    &--checked::after {
+      background-color: $brandPrimary;
+    }
+    &--round {
+      border-radius: 100%;
+      &::after {
+        border-radius: 100%;
+      }
+    }
+  }
+}
+.inputgroup--as-row {
+  .inputgroup__label {
+    width: auto;
+    align-self: flex-start;
+    margin-bottom: 0rem;
+  }
+  .inputgroup__input {
+    margin-left: auto;
+    align-self: flex-end;
+  }
+}
+
+.hidden {
+  display: none;
+}
