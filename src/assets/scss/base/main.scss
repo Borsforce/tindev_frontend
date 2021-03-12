@@ -4,12 +4,27 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: $background;
     font-size:10px;
-    background-image: url('~@/assets/background.png');
+    position: relative;
+    margin: 0;
+}
+
+.container {
+    max-width: 87.5rem;
+    margin: 0 auto;
 }
 
 #app {
-    max-width: 87.5rem;
-    margin: 0 auto;
+    position: relative;
+
+    &:before {
+        content: '';
+        background-image: url('~@/assets/background.png');
+        width: 100%;
+        height: 12.5rem;
+        display: inline-block;
+        position: absolute;
+        bottom: 11.25rem;
+    }
 }
 
 span, p {
@@ -21,4 +36,8 @@ span, p {
      color: #fff;
      text-decoration: none;
      font-size: .875rem;
+ }
+
+ h6 {
+     font-size: 1.125rem;
  }
